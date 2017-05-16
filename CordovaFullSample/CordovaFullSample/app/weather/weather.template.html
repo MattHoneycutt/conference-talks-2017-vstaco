@@ -1,0 +1,9 @@
+﻿<h1>Weather</h1>
+<p class="lead" ng-if="!vm.weather">Retrieving weather...</p>
+<div class="text-center" ng-if="vm.weather">
+    <h3>Current temp</h3>
+    <h1>{{vm.weather.main.temp}}</h1>
+</div>
+<div class="alert alert-danger" ng-if="vm.ex">
+    {{vm.ex}}
+</div>

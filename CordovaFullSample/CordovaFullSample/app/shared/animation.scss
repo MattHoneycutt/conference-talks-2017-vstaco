@@ -1,0 +1,82 @@
+﻿/* Animations derived from https://scotch.io/tutorials/animating-angularjs-apps-ngview */
+$animation-speed: 0.5s;
+
+/* slideOutLeft*/
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(-125%, 0, 0);
+    opacity: 0;
+  }
+}
+
+/* slideInRight */
+@keyframes slideInRight {
+  from {
+    transform: translate3d(125%, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/* slideInLeft*/
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-125%, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/* slideOutRight */
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(125%, 0, 0);
+    opacity: 0;
+  }
+}
+
+.animate-slide {
+  transform: translate3d(0,0,0);
+  transition: transform;
+  &.ng-enter {
+    position: absolute;
+    animation: slideInRight $animation-speed both ease-in;
+    animation-delay: 0.1s;
+  }
+
+  &.ng-leave {
+    position: absolute;
+    animation: slideOutLeft $animation-speed both ease-in;
+    animation-delay: 0.1s;
+  }
+}
+
+.reverse .animate-slide {
+  &.ng-enter {
+    position: absolute;
+    animation: slideInLeft $animation-speed both ease-in;
+    animation-delay: 0.1s;
+  }
+
+  &.ng-leave {
+    position: absolute;
+    animation: slideOutRight $animation-speed both ease-in;
+    animation-delay: 0.1s;
+  }
+}

@@ -1,0 +1,22 @@
+﻿{
+  "android": {
+    "release": {
+      "keystore": "../../release-key.keystore",
+      "storePassword": "pluralsight-rocks!",
+      "alias": "heroic applications",
+      "password": "pluralsight-rocks!",
+      "keystoreType": ""
+    }
+  },
+
+  "ios": {
+    "debug": {
+      "developmentTeam": "TEAM_ID_HERE"
+    },
+    "release": {
+      "developmentTeam": "TEAM_ID_HERE",
+      "codeSignIdentity": "iPhone Developer",
+      "packageType": "app-store"
+    }
+  }
+}

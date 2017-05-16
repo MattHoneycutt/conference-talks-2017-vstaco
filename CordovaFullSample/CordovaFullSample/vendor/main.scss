@@ -1,0 +1,8 @@
+﻿//This root file pulls in Bootstrap and our overrides for it. 
+@import "_superhero-variables.scss";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "_superhero.scss";
+
+.modal.fade .modal-dialog {
+  @include translate(0, 0);
+}

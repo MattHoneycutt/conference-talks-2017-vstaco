@@ -1,0 +1,12 @@
+﻿<h1>Where Am I?</h1>
+<p>
+    Where in the world are you?
+</p>
+<p class="lead" ng-if="vm.latitude == null">Retrieving location...</p>
+<div class="text-center" ng-if="vm.latitude != null">
+    <h3>Current location</h3>
+    <h1>{{vm.latitude}},{{vm.longitude}}</h1>
+</div>
+<div class="alert alert-danger" ng-if="vm.ex">
+    {{vm.ex}}
+</div>

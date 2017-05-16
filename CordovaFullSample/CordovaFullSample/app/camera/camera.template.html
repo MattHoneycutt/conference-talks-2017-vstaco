@@ -1,0 +1,13 @@
+﻿<h1>Camera</h1>
+<p>
+    Click the button, take a picture!
+</p>
+<div class="alert alert-danger" ng-if="vm.ex">
+    {{vm.ex}}
+</div>
+<p>
+    <button type="button" class="btn btn-primary" ng-click="vm.getPicture()">Take Picture</button>
+</p>
+<div ng-if="vm.image">
+    <img ng-src="{{vm.image}}" style="max-width: 100%; height: 400px;">
+</div>
